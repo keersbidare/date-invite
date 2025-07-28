@@ -1,62 +1,63 @@
-body {
+body, html {
     margin: 0;
     padding: 0;
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    background: #ffe6f0;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  }
-  
-  .background-tint {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
     height: 100%;
-    background: radial-gradient(circle, rgba(255,192,203,0.3) 0%, rgba(255,255,255,0.4) 100%);
-    z-index: -1;
+    font-family: 'Segoe UI', sans-serif;
   }
   
-  .photo-corner {
+  .background {
+    background: linear-gradient(to bottom right, #ffd1dc, #ffe6f0);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #6a1b9a;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+  
+  .photo {
     position: absolute;
     width: 120px;
-    height: 120px;
+    height: auto;
     border: 5px solid white;
-    box-shadow: 2px 4px 10px rgba(0,0,0,0.2);
     border-radius: 12px;
-    overflow: hidden;
-    transform: rotate(var(--angle));
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    opacity: 0.9;
   }
   
-  .photo-corner img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  /* Positioning each corner with random tilt */
+  /* Random tilt and position for 4 corners */
   .top-left {
     top: 20px;
     left: 20px;
-    --angle: -8deg;
+    transform: rotate(-8deg);
   }
   
   .top-right {
-    top: 20px;
-    right: 20px;
-    --angle: 10deg;
+    top: 30px;
+    right: 25px;
+    transform: rotate(10deg);
   }
   
   .bottom-left {
-    bottom: 20px;
-    left: 20px;
-    --angle: 7deg;
+    bottom: 30px;
+    left: 30px;
+    transform: rotate(6deg);
   }
   
   .bottom-right {
     bottom: 20px;
-    right: 20px;
-    --angle: -5deg;
+    right: 40px;
+    transform: rotate(-12deg);
   }
   
