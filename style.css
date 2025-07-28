@@ -1,0 +1,51 @@
+body {
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    background-color: #fffafc;
+    text-align: center;
+    padding: 40px;
+    color: #333;
+  }
+  
+  .container {
+    max-width: 500px;
+    margin: auto;
+    background: #ffeef2;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 0, 102, 0.1);
+  }
+  
+  .cute-photo {
+    width: 100%;
+    border-radius: 12px;
+    margin-bottom: 20px;
+  }
+  
+  .button-group button {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+  }
+  
+  #yesBtn {
+    background-color: #ff69b4;
+    color: white;
+  }
+  
+  #noBtn {
+    background-color: #ccc;
+    color: black;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+  }
+  
+  #responseArea {
+    margin-top: 20px;
+  }
+  
