@@ -4,7 +4,7 @@ body, html {
     height: 100%;
     font-family: 'Segoe UI', sans-serif;
   }
-  
+
   .background {
     background: linear-gradient(to bottom right, #ffd1dc, #ffe6f0);
     height: 100vh;
@@ -12,51 +12,104 @@ body, html {
     overflow: hidden;
   }
   
+  .slideshow-container {
+    position: absolute;
+    left:5%;
+    top: 25%;
+    width: 380px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(74, 6, 17, 0.6);
+  }
+  
+  .slideshow-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;   
+    object-fit: cover;
+    opacity: 0;
+    border: 5px solid  rgba(44, 2, 9, 0.6);
+    border-radius: 20px;
+    animation: fadeSlide 4s infinite;
+  }
+  
+  .slideshow-img:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .slideshow-img:nth-child(2) {
+    animation-delay: 1s;
+  }
+  .slideshow-img:nth-child(3) {
+    animation-delay: 2s;
+  }
+  .slideshow-img:nth-child(4) {
+    animation-delay: 3s;
+  }
+  
+  @keyframes fadeSlide {
+    0% {
+      opacity: 0;
+    }
+    5% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 1;
+    }
+    33% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0;
+    }
+  }
+  
   .content {
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 40%;
+    left: 70%;
     transform: translate(-50%, -50%);
     text-align: center;
-    color: #6a1b9a;
+    color: #a21135;
   }
   
   h1 {
     font-size: 2.5em;
     margin-bottom: 1em;
   }
-  
-  .photo {
-    position: absolute;
-    width: 30%;
-    border: 5px solid white;
-    border-radius: 12px;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    opacity: 0.9;
-  }
-  
-  /* Random tilt and position for 4 corners */
-  .top-left {
-    top: 20px;
-    left: 20px;
-    transform: rotate(-8deg);
-  }
-  
-  .top-right {
-    top: 30px;
-    right: 25px;
-    transform: rotate(10deg);
-  }
-  
-  .bottom-left {
-    bottom: 30px;
-    left: 30px;
-    transform: rotate(6deg);
-  }
-  
-  .bottom-right {
-    bottom: 20px;
-    right: 40px;
-    transform: rotate(-12deg);
-  }
+
+  .yes-button,
+.no-button {
+  position: absolute;
+  top: 60%;
+  transform: translateY(-50%);
+  padding: 16px 40px;
+  font-size: 25px;
+  font-weight: bold;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  color: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.yes-button {
+  left: 55%;
+  background: linear-gradient(135deg, #a00043, #720030);
+}
+
+.no-button {
+  left: 75%;
+  background: linear-gradient(135deg, #770301, #460100);
+}
+
+.yes-button:hover,
+.no-button:hover {
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
+}
+
   

@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .background {
+    background: linear-gradient(to bottom right, #ffd1dc, #ffe6f0);
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .content {
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #6a1b9a;
+  }
+  
+  h1 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+  }
+  
+  .photo {
+    position: absolute;
+    width: 30%;
+    height: 35%;
+    border: 5px solid rgb(7, 7, 7);
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 0, 102, 0.1);
+    opacity: 0.9;
+  }
+  
+  /* Random tilt and position for 4 corners */
+  .top-left {
+    top: 15%;
+    left: 20px;
+    bottom: -70px;
+    transform: rotate(-8deg);
+  }
+  
+  .top-right {
+    top: 30px;
+    right: 25px;
+    transform: rotate(10deg);
+  }
+  
+  .bottom-left {
+    bottom: 30px;
+    left: 30px;
+    transform: rotate(6deg);
+  }
+  
+  .bottom-right {
+    bottom: 20px;
+    right: 40px;
+    transform: rotate(-12deg);
+  }
+  
