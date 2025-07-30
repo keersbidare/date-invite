@@ -10,6 +10,7 @@ body, html {
     height: 100vh;
     position: relative;
     overflow: hidden;
+    
   }
   
   .slideshow-container {
@@ -96,6 +97,8 @@ body, html {
   transition: all 0.3s ease;
 }
 
+
+
 .yes-button {
   left: 55%;
   background: linear-gradient(135deg, #a00043, #720030);
@@ -111,5 +114,74 @@ body, html {
   transform: translateY(-50%) scale(1.1);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.3);
 }
+
+.heartWrapper{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+.heartWrapper i{
+    font-size: 9rem;
+    color: #f90b57;
+    text-shadow: 0 0 10rem #f90b57;
+    display: inline-block;
+    position: absolute;
+    transform: scale(0);
+    animation: heartAnim 4s linear infinite;
+    animation-delay: calc(0.5s*var(--j));
+}
+@keyframes heartAnim {
+    0%{
+        transform: scale(0);
+    }
+    100%{
+        transform: scale(0.5);
+        bottom: 100%;
+    }
+}
+.heartWrapper i:nth-child(1){
+    bottom: -15%;
+    left: 20%;
+}
+.heartWrapper i:nth-child(2){
+    bottom: -15%;
+    left: 40%;
+}
+.heartWrapper i:nth-child(3){
+    bottom: -10%;
+    left: 60%;
+}
+.heartWrapper i:nth-child(4){
+    bottom: -150%;
+    left: 80%;
+}
+.heartWrapper i:nth-child(5){
+    bottom: -80%;
+    left: 5%;
+}
+.heartWrapper i:nth-child(6){
+    bottom: -70%;
+    right: 20%;
+}
+.heartWrapper i:nth-child(7){
+    bottom: -80%;
+    right: 40%;
+}
+.heartWrapper i:nth-child(8){
+    bottom: -10%;
+    right: 60%;
+}
+.heartWrapper i:nth-child(9){
+    bottom: -50%;
+    right: 80%;
+}
+
+.heartWrapper i:nth-child(10){
+    bottom: 0;
+    right: 5%;
+}
+
 
   
